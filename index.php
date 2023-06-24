@@ -77,13 +77,9 @@
         $filePath = $dir . '/' . $name . '.txt'; // Agregar la extensión ".txt"
         $fileData = "Título: $fileTitle\n\n$fileContent";
         file_put_contents($filePath, $fileData);
-        header('Location: index.php'); // Redirige a la página principal después de crear el archivo
-        exit(); // Detiene la ejecución del código posterior
       } elseif ($type == 'folder') {
         $folderPath = $dir . '/' . $name;
         mkdir($folderPath); // Crea una nueva carpeta
-        header('Location: index.php'); // Redirige a la página principal después de crear la carpeta
-        exit(); // Detiene la ejecución del código posterior
       }
     }
 
